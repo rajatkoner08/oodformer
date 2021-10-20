@@ -370,7 +370,7 @@ def main(opt, cache=None, eval_over_time_pkl=None):
 
         if in_dtype=='test':
             if opt.distance == "Cosine" or opt.distance =='Softmax':
-                auroc_ssd = get_roc_sklearn(ood_score, e super cn_score )
+                auroc_ssd = get_roc_sklearn(ood_score, in_score)
             else:
                 auroc_ssd = get_roc_sklearn(in_score,ood_score)
             print("SSD AUROC {0} and Distance {1}".format(auroc_ssd,opt.distance))
